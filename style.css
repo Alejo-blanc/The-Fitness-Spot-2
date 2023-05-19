@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/ttf/Lato-Regular.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('./assets/ttf/Lato-Bold.ttf');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Lato';
+    background-color: #eee;
+}
+
+/* TARJETAS */
+.training {
+    margin-top: 60px;
+    padding: 0 20px;
+}
+
+.training__title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.training__cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+.card__header img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.card__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.card__description {
+    margin-bottom: 40px;
+}
+
+.card__link {
+    background-color: rgba(0, 0, 0, 0.39);
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 0;
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.card__link:hover {
+    background-color: rgb(75, 195, 250);
+}
+
+
+/* MEDIA QUERIES */
+/* estrategia "mobile first": breakpoints ordenados de manor a mayor */
+@media (min-width: 768px) {
+    .header__container-navbar {
+        display: flex;
+    }
+
+    .header__container-navbar li {
+        margin: 0 15px;
+    }
+    
+    .header__container-navbar li a {
+        color: #e2e8f0;
+        font-weight: bold;
+    }
+
+    .header__container-navbar-mobile {
+        display: none;
+    }
+
+    .training__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .hero__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .training__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
